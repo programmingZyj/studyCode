@@ -15,12 +15,32 @@ public class HelloController {
 //        return "Hello World!";
 //    }
 
+    /**
+     * 开发web应用，使用模版引擎
+     * @param model
+     * @return
+     */
+//    @RequestMapping("/")
+//    public String index(Model model) {
+// 加⼊⼀个属性，⽤来在模板中读取
+//        model.addAttribute("host", "http://www.baidu.com");
+// return模板⽂件的名称，对应src/main/resources/templates/index.html
+//        return "index";
+//    }
 
+
+    /**
+     * 使用spring-security进行安全控制
+     * @param model
+     * @return
+     */
     @RequestMapping("/")
     public String index(Model model) {
-// 加⼊⼀个属性，⽤来在模板中读取
-        model.addAttribute("host", "http://www.baidu.com");
-// return模板⽂件的名称，对应src/main/resources/templates/index.html
-        return "index";
+        return "index-security";
+    }
+
+    @RequestMapping("/hello")
+    public String hello(){
+        return "hello";
     }
 }
